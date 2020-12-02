@@ -1,0 +1,91 @@
+
+h1 {
+	text-align: center;
+}
+#main {
+	margin: auto;
+	width:400px;
+	height:400px;
+}
+a{
+  float: right;
+  width = 100px;
+   height= 300px;
+}
+.tile {
+	width:96px;
+	height:96px;
+	float: left;
+	text-align: center;
+	border: 2px black solid;
+	font-size: 32px;
+	line-height: 100px;
+	text-shadow: 1px 2px 2px black;
+}
+
+#shuffle{
+	text-align: center;
+	margin: auto;
+}
+
+.super-mario { background: url("super-mario.jpg"); }
+.pikachu       { background: url("pikachu.jpg");       }
+.goku      { background: url("goku.jpg");      }
+.totoro        { background: url("totoro.jpg");        }
+
+#one      { background-position: 0      0;      }
+#two      { background-position: -100px 0;      }
+#three    { background-position: -200px 0;      }
+#four     { background-position: -300px 0;      }
+#five     { background-position: 0      -100px; }
+#six      { background-position: -100px -100px; }
+#seven    { background-position: -200px -100px; }
+#eight    { background-position: -300px -100px; }
+#nine     { background-position: 0      -200px; }
+#ten      { background-position: -100px -200px; }
+#eleven   { background-position: -200px -200px; }
+#twelve   { background-position: -300px -200px; }
+#thirteen { background-position: 0      -300px; }
+#fourteen { background-position: -100px -300px; }
+#fifteen  { background-position: -200px -300px; }
+#sixteen  { border: 2px solid white !important; }
+
+.movablepiece {
+
+	transition: all 0.5s ease-in-out;
+}
+
+.movablepiece:hover {
+	border-color: red ;
+	text-decoration: underline ;
+	color: #006600;
+	cursor: pointer;
+}
+
+#win {
+	margin: auto;
+	text-align: center;
+	display: block;
+}
+
+
+
+.animate-up {
+
+	transform: translate(0, -100px);
+}
+
+.animate-down {
+
+	transform: translate(0, 100px);
+}
+
+.animate-left {
+
+	transform: translate(-100px, 0);
+}
+
+.animate-right {
+
+	transform: translate(100px, 0);
+}
