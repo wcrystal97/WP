@@ -1,0 +1,512 @@
+
+h1 {
+	text-align: center;
+}
+#main {
+	margin: auto;
+	width:400px;
+	height:400px;
+}
+a{
+  float: right;
+  width = 100px;
+   height= 300px;
+}
+.tile {
+	width:96px;
+	height:96px;
+	float: left;
+	text-align: center;
+	border: 2px black solid;
+	font-size: 32px;
+	line-height: 100px;
+	text-shadow: 1px 2px 2px black;
+}
+
+#shuffle{
+	text-align: center;
+	margin: auto;
+}
+
+.super-mario { background: url("super-mario.jpg"); }
+.pikachu       { background: url("pikachu.jpg");       }
+.goku      { background: url("goku.jpg");      }
+.totoro        { background: url("totoro.jpg");        }
+
+#one      { background-position: 0      0;      }
+#two      { background-position: -100px 0;      }
+#three    { background-position: -200px 0;      }
+#four     { background-position: -300px 0;      }
+#five     { background-position: 0      -100px; }
+#six      { background-position: -100px -100px; }
+#seven    { background-position: -200px -100px; }
+#eight    { background-position: -300px -100px; }
+#nine     { background-position: 0      -200px; }
+#ten      { background-position: -100px -200px; }
+#eleven   { background-position: -200px -200px; }
+#twelve   { background-position: -300px -200px; }
+#thirteen { background-position: 0      -300px; }
+#fourteen { background-position: -100px -300px; }
+#fifteen  { background-position: -200px -300px; }
+#sixteen  { border: 2px solid white !important; }
+
+.movablepiece {
+
+	transition: all 0.5s ease-in-out;
+}
+
+.movablepiece:hover {
+	border-color: red ;
+	text-decoration: underline ;
+	color: #006600;
+	cursor: pointer;
+}
+
+#win {
+	margin: auto;
+	text-align: center;
+	display: block;
+}
+
+
+
+.animate-up {
+
+	transform: translate(0, -100px);
+}
+
+.animate-down {
+
+	transform: translate(0, 100px);
+}
+
+.animate-left {
+
+	transform: translate(-100px, 0);
+}
+
+.animate-right {
+
+	transform: translate(100px, 0);
+}
+/*
+#main {
+    margin: auto;
+    width:400px;
+    height:400px;
+    position: relative;
+}
+
+.tile {
+    width:96px;
+    height:96px;
+    float: left;
+    text-align: center;
+    border: 2px black solid;
+    vertical-align: middle;
+    font-size: 32px;
+    font-family: sans-serif;
+    line-height: 100px;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+#one      { background-position: 0      0;      }
+#two      { background-position: -100px 0;      }
+#three    { background-position: -200px 0;      }
+#four     { background-position: -300px 0;      }
+#five     { background-position: 0      -100px; }
+#six      { background-position: -100px -100px; }
+#seven    { background-position: -200px -100px; }
+#eight    { background-position: -300px -100px; }
+#nine     { background-position: 0      -200px; }
+#ten      { background-position: -100px -200px; }
+#eleven   { background-position: -200px -200px; }
+#twelve   { background-position: -300px -200px; }
+#thirteen { background-position: 0      -300px; }
+#fourteen { background-position: -100px -300px; }
+#fifteen  { background-position: -200px -300px; }
+#sixteen  { border: 2px solid white !important; }
+*/
+
+ /* #puzzle{
+    	width:400px;
+    	height:400px;
+    	margin: auto;
+
+
+
+    }
+
+
+    #piece1 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: 0px 0px;
+    }
+
+    #piece2 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -100px 0px;
+    }
+    #piece3 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -200px 0px;
+    }
+    #piece4 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -300px 0px;
+    }
+     #piece5 {
+     	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: 0px -100px;
+    }
+    #piece6 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -100px -100px;
+    }
+    #piece7 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -200px -100px;
+    }
+    #piece8 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -300px -100px;
+    }
+    #piece9 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: 0px -200px;
+    }
+    #piece10 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -100px -200px;
+    }
+    #piece11 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -200px -200px;
+    }
+    #piece12 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -300px -200px;
+    }
+    #piece13 {
+    	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: 0px -300px;
+    }
+     #piece14 {
+     	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -100px -300px;
+    }
+     #piece15 {
+     	background-image:url(super-mario.jpg);
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	border: 1px black solid;
+    	background-position: -200px -300px;
+    }
+     #piece16 {
+
+    	width:98px;
+    	height:98px;
+    	float: left;
+    	text-align: center;
+    	line-height: 100px;
+    	font-family: "Arial", sans-serif;
+    	font-size: 30px;
+    	background-image:none
+    	
+    }
+    #shuffle{
+    	text-align: center;
+    	margin: auto;
+    }
+    */
+/*#piece1{
+	width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+	background-position: 0      0;
+
+}
+#piece2{
+	width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+    background-position: 0      0;
+
+}
+.puzzle {
+   background-image:url(super-mario.jpg);
+   width:100px;
+   height:100px;
+}
+
+.piece1 {
+   width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+	background-position: 00;
+}
+
+.piece2 {
+	width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+	background-position:-100px -100px
+	}*/
+/*#puzzle{
+       margin: auto;
+    width:400px;
+    height:400px;
+    background: yellow;
+    /*background-image:url(super-mario.jpg);*/
+    /*position: absolute;*/
+    /*top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }*/
+/*#piece1 {
+   width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+    vertical-align: middle;
+    font-size: 32px;
+    font-family: sans-serif;
+    line-height: 100px;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+    background-position: 0      0;
+}
+#piece2 {
+   background-position:-100px 0px;
+   width:98px;
+    height:98px;
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+    vertical-align: middle;
+    font-size: 32px;
+    font-family: sans-serif;
+    line-height: 100px;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+.puzzle {
+   background-image:url(super-mario.jpg);
+   width:100px;
+   height:100px;
+}
+
+.piece11 {
+   background-position:0 0
+}
+
+.piece21 {
+   background-position:-100px -100px
+   }*/
+/*#piece3 {
+   background-position:-200px 0px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+   position: relative;
+}
+#piece4 {
+   background-position:-300px 0px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece5 {
+   background-position:0px -100px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece6 {
+   background-position:-100px -100px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece7 {
+   background-position:-200px -100px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece8 {
+   background-position:-300px -100px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece9 {
+   background-position:0px -200px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece10 {
+   background-position:-100px -200px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece11 {
+   background-position:-200px -200px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece12 {
+   background-position:-300px -200px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece13 {
+   background-position:0px -300px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece14 {
+   background-position:-100px -300px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}
+#piece15 {
+   background-position:-200px -300px;
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}#piece16 {
+   border: 1px solid black;
+   width:100px;
+   height:100px;
+}*/
